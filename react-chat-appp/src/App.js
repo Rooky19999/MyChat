@@ -7,7 +7,7 @@ import CreateUser from "./components/CreateUser";
 import OnlineUsers from "./components/OnlineUsers";
 import MessagesControl from "./components/MessagesControl";
 
-const socket = io(`http://localhost:7000`);
+const socket = io(`http://localhost:7000` || process.env.PORT);
 
 function App() {
   const [step, setStep] = useState(0);
